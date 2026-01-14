@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <title>For Marie! :D</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000033;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        perspective: 1000px;
+    }
+
+    #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-image: radial-gradient(ellipse, #000080, black);
+    }
+
+    .card-container {
+        position: relative;
+        width: 90%;
+        max-width: 450px;
+        height: 350px;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .card-container.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px deepskyblue;
+    }
+
+    .front {
+        background-color: #f0f8ff;
+        background-image: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .front::before {
+        content: "";
+        position: absolute;
+        top: 0; width: 100%; height: 100%;
+        background-color: rgba(0, 191, 255, 0.05);
+        clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+        border-radius: 20px;
+    }
+
+    .back {
+        background-color: white;
+        transform: rotateY(180deg);
+        padding: 35px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .stamp-button {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #000080, #00bfff);
+        border-radius: 50%;
+        border: 3px dashed white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px deepskyblue;
+        animation: stampPulse 2s infinite;
+        z-index: 2;
+        margin: 10px 0;
+    }
+
+    @keyframes stampPulse {
+        0% { box-shadow: 0 0 10px #00bfff; }
+        50% { box-shadow: 0 0 25px #00bfff, 0 0 40px rgba(0, 191, 255, 0.4); }
+        100% { box-shadow: 0 0 10px #00bfff; }
+    }
+
+    .stamp-button::after { content: "❤"; color: white; font-size: 30px; }
+
+    .script-text { font-family: 'Great Vibes', cursive; color: #000080; text-align: center; }
+    .front .script-text { font-size: 50px; margin: 0; z-index: 2; }
+    .back h2 { margin-top: 0; font-size: 28px; }
+    .back p { text-align: justify; line-height: 1.6; font-size: 14px; color: #333; }
+
+    .click-hint {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #000080;
+        font-size: 9px;
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+
+    .back::-webkit-scrollbar { width: 5px; }
+    .back::-webkit-scrollbar-thumb { background: skyblue; border-radius: 10px; }
+</style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="card-container" id="card" onclick="toggleFlip(event)">
+        <div class="front">
+            <p class="script-text">To Marie</p>
+            <div class="stamp-button"></div>
+            <p class="click-hint">CLICK TO FLIP</p>
+        </div>
+
+        <div class="back">
+            <h1 class="script-text">☆*: .｡. Surprise! .｡.:*☆</h1>
+            <p>
+                Boom tarat tarat... I wasn't kidding when I said na addicted ako sa coding HAHAHAHA <br><br>
+                I made this letter online kasi tamad ako magsulat hehe and you might not understand it if I wrote it in paper because I have inherited that ugly engineering handwriting (yuck). I am writing this letter because I want to thank you for being my friend and for making my 2025 literally unforgettable. Most of my core memories are probably from that year and you are a part of them. I'm bad at writing letters so bear with me for a moment... <br><br>
+                Will it come as a surprise to you that I think about you a lot? Not in a weird way, but sometimes I would wish you were with me... like when something funny happens in class that I think you would also find funny or when I know I'm up to no good and I need someone to stop my implusive purchases. I miss you more when I'm alone at the TLC or some place in UP; I just think to myself that damn, I miss sitting beside you. I miss seeing that weird face you make when I poke your sides. I miss walking around MC with you (and I hope we could do that some time in UP...as if we have the time). I miss eating lunch with you, or rather you eating your lunch and I just lie down, using your lap as a pillow. I miss hugging you most of all! (because you are soooo not a hugger tsk tsk). <br><br>
+                With all the moments that I miss and wished, I want you to know that I am thankful to have you in my life until now—not just because of the whole engineering trauma bonding things, but also you provide a certain joy to me when I see you like I can be the weird person I am when I'm with you (#safespace) and I love that hehehe. Thank you for being worried about my health because I know I can be stubborn, especially with my sleep (but I find it funny that you are still awake at 2AM and you tell me to sleep). Thank you for bearing with my... family nonsense... and my own nonsense. Definitely grateful na hindi ka pa nasasawa sa'kin mwehehehe... This year, I wish for more years of our friendship and more fun memories with you. <br><br>
+                <b>Loving you always,</b><br>
+                <span class="script-text" style="font-size: 28px;">Ysa</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let musicStarted = false;
+
+        function toggleFlip(e) {
+            e.stopPropagation();
+            const card = document.getElementById('card');
+            const music = document.getElementById('bgMusic');
+            card.classList.toggle('flipped');
+            if (!musicStarted) {
+                music.play().catch(error => console.log("Music blocked."));
+                musicStarted = true;
+            }
+        }
+
+        window.onload = function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+                    /* Mixed Original Blues + The Yellow/Gold */
+                    "color": { "value": ["#ffffff", "#87CEFA", "#00BFFF", "#FFD700"] }, 
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.6, "random": true },
+                    "size": { "value": 3.5, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#FFD700", /* Hover lines are now Gold */
+                        "opacity": 0, 
+                        "width": 1
+                    },
+                    "move": { 
+                        "enable": true, 
+                        "speed": 4, 
+                        "direction": "none", 
+                        "random": true, 
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 200, "line_linked": { "opacity": 0.8 } },
+                        "push": { "particles_nb": 25 } 
+                    }
+                },
+                "retina_detect": true
+            });
+        };
+    </script>
+</body>
+</html>
