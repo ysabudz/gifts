@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <title>For Jaelah! :D</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1a0033;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        perspective: 1000px;
+    }
+
+    #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-image: radial-gradient(ellipse, #300050, black);
+    }
+
+    .card-container {
+        position: relative;
+        width: 90%;
+        max-width: 450px;
+        height: 350px;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .card-container.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px #9370db;
+    }
+
+    .front {
+        background-color: #f3e5f5;
+        background-image: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .front::before {
+        content: "";
+        position: absolute;
+        top: 0; width: 100%; height: 100%;
+        background-color: rgba(147, 112, 219, 0.1);
+        clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+        border-radius: 20px;
+    }
+
+    .back {
+        background-color: white;
+        transform: rotateY(180deg);
+        padding: 35px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .stamp-button {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #4b0082, #9370db);
+        border-radius: 50%;
+        border: 3px dashed white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px #9370db;
+        animation: stampPulse 2s infinite;
+        z-index: 2;
+        margin: 10px 0;
+    }
+
+    @keyframes stampPulse {
+        0% { box-shadow: 0 0 10px #9370db; }
+        50% { box-shadow: 0 0 20px #9370db, 0 0 30px rgba(147, 112, 219, 0.4); }
+        100% { box-shadow: 0 0 10px #9370db; }
+    }
+
+    .stamp-button::after { content: "❤"; color: white; font-size: 30px; }
+
+    .script-text { font-family: 'Great Vibes', cursive; color: #4b0082; text-align: center; }
+    .front .script-text { font-size: 50px; margin: 0; z-index: 2; }
+    .back h2 { margin-top: 0; font-size: 28px; }
+    .back p { text-align: justify; line-height: 1.6; font-size: 14px; color: #333; }
+
+    .click-hint {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #4b0082;
+        font-size: 9px;
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+
+    .back::-webkit-scrollbar { width: 5px; }
+    .back::-webkit-scrollbar-thumb { background: #9370db; border-radius: 10px; }
+</style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="card-container" id="card" onclick="toggleFlip(event)">
+        <div class="front">
+            <p class="script-text">To Jaelah</p>
+            <div class="stamp-button"></div>
+            <p class="click-hint">CLICK TO FLIP</p>
+        </div>
+
+        <div class="back">
+            <h1 class="script-text">☆*: .｡. Surprise! .｡.:*☆</h1>
+            <p>
+                'Di mo siguro inexpect na may naprepare akong ganito HAHAHA. <br><br>
+                I made this letter because I wanted to express how grateful I am for having you as my friend and for making my 2025 a year memorable. We had our ups and downs with HTML and CSS kaya I thought it would be funny na gumawa ako ng website for the letter HAHAHA throwback lang ganon hehe. <br><br> Alam mo ba... na lagi kitang namimiss—'di ako nagbibiro. I miss you on days na maganda ang araw on a Wednesday kasi maalala ko na papanoorin kita maglaro ng tackle rugby. Namimiss kita on days na 'pag nasa anik-anik store ako tapos may makikita ako na pin or sticker na for sure kung nandito ka, bibili tayo ng twinnies non. I especially miss you on days na bumabagsak mental health ko at need ko ng mahigpit na yakap. Miss rin kita kapag may nakita akong potpots HAHAHAHA sa dami ba namang potpots na nakain natin noon... <br><br> 
+                But now na hindi nagtapos sa high school 'yung friendship natin, 'yung pagmimiss ko sa'yo ay nawawala because I can just look forward to the time na gagala ulit tayo like now or ic-chat nalang kita sa Messenger or Tiktok (kasi may streak tayo). Thank you for staying by my side kahit magkaiba na tayo ng school huhu. Please know na nandito rin ako para sa'yo, always ready to chika and cry with you. Thank you for being the funny and inspiring person that you are, ang galing mo kaya magmotivate ng tao HAHAHA. Ang wish ko this year is for more years of our friendship and that I can create more fun memories with you. <br><br>
+                <b>Loving you always,</b><br>
+                <span class="script-text" style="font-size: 28px;">Ysa</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let musicStarted = false;
+
+        function toggleFlip(e) {
+            e.stopPropagation();
+            const card = document.getElementById('card');
+            const music = document.getElementById('bgMusic');
+            card.classList.toggle('flipped');
+            if (!musicStarted) {
+                music.play().catch(error => console.log("Music blocked."));
+                musicStarted = true;
+            }
+        }
+
+        window.onload = function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": ["#ffffff", "#FFD700", "#9370db", "#f3e5f5"] }, /* White, Gold/Yellow, Purple */
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.6, "random": true },
+                    "size": { "value": 3.5, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#FFD700",
+                        "opacity": 0, /* Only visible on hover */
+                        "width": 1
+                    },
+                    "move": { 
+                        "enable": true, 
+                        "speed": 4, /* Faster base speed */
+                        "direction": "none", 
+                        "random": true, 
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 200, "line_linked": { "opacity": 0.8 } },
+                        "push": { "particles_nb": 25 } /* Big burst for firework feel */
+                    }
+                },
+                "retina_detect": true
+            });
+        };
+    </script>
+</body>
+</html>
